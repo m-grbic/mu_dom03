@@ -110,8 +110,6 @@ class SVM():
 
         # Anuliranje vrednosti u okolini 0 i C
         alpha = deepcopy(self.alpha)
-        # if self.C is not None:
-        #     alpha[abs(alpha - self.C) < tol] = 0
         alpha[alpha < tol] = 0
 
         # Indeksi nosecih vektora
